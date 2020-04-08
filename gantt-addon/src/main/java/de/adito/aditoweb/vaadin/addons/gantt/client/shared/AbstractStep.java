@@ -179,7 +179,8 @@ public abstract class AbstractStep implements Serializable {
     }
 
     public void addStyleName(String style) {
-        styleNames.add(style);
+        if (style != null && style != "")
+            styleNames.add(style);
     }
 
     public void addStyleNames(String... styles) {
